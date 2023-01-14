@@ -1,0 +1,64 @@
+.coins {
+  padding: 20px 80px;
+}
+.coins h2 {
+  margin: 20px 0;
+}
+.coins .coins__filters {
+  display: flex;
+}
+.coins .coins__filters-rows {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.coins .btn {
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  color: #000;
+  height: 40px;
+  border-radius: 5px;
+  font-weight: 600;
+  outline: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #f3f3f3;
+  border: 1px solid #f3f3f3;
+}
+.coins .btn:not(:first-child) {
+  margin-left: 10px;
+}
+
+.coins .btn:hover {
+  color: #000;
+  background: transparent;
+  border: 1px solid #a1a1a1;
+}
+.coins .btn.active {
+  color: #fff;
+  background: #4e5ffb;
+  border: 1px solid #4e5ffb;
+}
+.coins .btn.favourite .text {
+  display: inline-block;
+  margin-left: 5px;
+}
+.css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root {
+  padding: 0 !important;
+}
+.css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root:hover {
+  background-color: transparent !important;
+}
+
+/* PAGINATION */
+
+.coins .coins__pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.coins .coins__pagination ul li:not(:last-child) {
+  margin-right: 10px;
+}

@@ -1,0 +1,22 @@
+.carousel {
+  padding: 30px 80px;
+}
+.carousel .carousel__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.carousel .carousel__item {
+  background: #fff;
+  padding: 15px;
+  display: flex;
+  width: 32%;
+  box-shadow: 0 1.5 18 4.5 #d0d6e34d;
+  border-radius: 10px;
+}
+.carousel .carousel__item .carousel__info {
+  margin-left: 20px;
+}
+.carousel .carousel__item .carousel__info h4 {
+  margin-top: 10px;
+}
