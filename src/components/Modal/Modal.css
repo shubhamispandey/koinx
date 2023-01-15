@@ -1,0 +1,45 @@
+.modal {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 80%;
+  padding: 20px;
+  border: 0 !important;
+  outline: 0 !important;
+}
+.modal > div:not(:last-child) {
+  margin-bottom: 20px;
+}
+.modal .modal__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.modal .modal__close {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.modal .modal__close:hover {
+  background: #d3d3d369;
+}
+.modal .coin-name {
+  display: flex;
+  align-items: center;
+}
+.modal .coin-name img {
+  width: 25px;
+  margin-right: 5px;
+}
+.modal .coin-desc h5 {
+  font-weight: 600;
+  font-size: 16px;
+}
+.modal .coin-desc p {
+  font-weight: 500;
+  font-size: 14px;
+}

@@ -4,6 +4,8 @@ import { Star, StarBorder } from "@mui/icons-material";
 import MoreVertRoundedIcon from "@mui/icons-material/MoreVertRounded";
 import { Checkbox } from "@mui/material";
 
+import Modal from "../../components/Modal/Modal";
+
 const Table = ({
   coins,
   page,
@@ -11,6 +13,9 @@ const Table = ({
   setFavouriteCoins,
   activeBtn,
 }) => {
+  const [openModal, setOpenModal] = React.useState(false);
+  const [modalCoin, setModalCoin] = useState([]);
+
   // FAVOURITE ADD INDIVIDUAL COIN
   const [favClicked, setFavClicked] = useState();
   useEffect(() => {
@@ -26,8 +31,22 @@ const Table = ({
     setFavClicked("");
   }, [favClicked]);
 
+  const handleOpenModal = (id) => {
+    if (window.innerWidth > 500) {
+      return;
+    }
+
+    const coin = coins.filter((coin) => coin.id === id);
+    setModalCoin(coin);
+    setOpenModal(true);
+  };
   return (
     <>
+      <Modal
+        openModal={openModal}
+        setOpenModal={setOpenModal}
+        modalCoin={modalCoin}
+      />
       <table>
         <thead>
           <tr>
@@ -45,7 +64,7 @@ const Table = ({
         </thead>
         <tbody>
           {coins.map((coin, i) => (
-            <tr key={coin.id}>
+            <tr key={coin.id} onClick={() => handleOpenModal(coin.id)}>
               <td>
                 <Checkbox
                   icon={<StarBorder />}
