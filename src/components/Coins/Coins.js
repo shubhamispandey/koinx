@@ -1,13 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import {
-  Checkbox,
-  FormControl,
-  MenuItem,
-  Pagination,
-  Select,
-} from "@mui/material";
+import { FormControl, MenuItem, Pagination, Select } from "@mui/material";
 import { Star, StarBorder } from "@mui/icons-material";
 import Table from "../Table/Table";
 
@@ -23,7 +17,6 @@ const Coins = () => {
 
   //   FILTER BUTTON STATES
   const [favouriteCoins, setFavouriteCoins] = useState([]);
-  const [favouriteFilterChecked, setFavouriteFilterChecked] = useState(false);
   const [activeBtn, setActiveBtn] = useState("cryptocurrencies");
 
   // RESHOW PAGINATION AFTER REMOVING FAVOURITES
@@ -56,15 +49,12 @@ const Coins = () => {
       return;
     }
     setActiveBtn("favourite");
-
-    setFavouriteFilterChecked(!favouriteFilterChecked);
     setCoins(favouriteCoins);
     setShowPagination(false);
   };
 
   //  RELOAD API
   const handleReloadApi = () => {
-    setFavouriteFilterChecked(false);
     setActiveBtn("cryptocurrencies");
     setReloadApi(!reloadApi);
     setShowPagination(true);
@@ -83,11 +73,7 @@ const Coins = () => {
             }`}
             onClick={handleShowFavourite}
           >
-            <Checkbox
-              icon={<StarBorder />}
-              checkedIcon={<Star />}
-              checked={favouriteFilterChecked}
-            />
+            {activeBtn === "favourite" ? <Star /> : <StarBorder />}
             <span className="text">Favourites</span>
           </button>
           <button
