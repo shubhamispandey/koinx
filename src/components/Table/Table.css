@@ -39,11 +39,51 @@ table tbody td:nth-child(3) {
   text-align: left;
   display: flex;
   align-items: center;
-  padding-left: 10px;
 }
 table td:nth-child(3) h4 {
   margin-right: 10px;
 }
 table td:last-child {
   padding-right: 25px;
+}
+
+@media (max-width: 1300px) {
+  table td:nth-child(8) {
+    display: none;
+  }
+}
+@media (max-width: 1200px) {
+  table td:nth-child(7) {
+    display: none;
+  }
+}
+@media (max-width: 1000px) {
+  table td:nth-child(9) {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  table td:nth-child(6) {
+    display: none;
+  }
+  table td:last-child {
+    display: none;
+  }
+}
+@media (max-width: 570px) {
+  table td:nth-child(2) {
+    display: none;
+  }
+  table td:nth-child(1) {
+    padding: 0 0 0 10px;
+    width: 40px;
+  }
+  table tbody tr td {
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  table td:nth-child(5) {
+    display: none;
+  }
 }

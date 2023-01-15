@@ -1,17 +1,13 @@
 .carousel {
   padding: 30px 80px;
 }
-.carousel .carousel__items {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 .carousel .carousel__item {
-  background: #fff;
-  padding: 15px;
+  background: rgb(255, 255, 255);
   display: flex;
-  width: 32%;
-  box-shadow: 0 1.5 18 4.5 #d0d6e34d;
+  padding: 15px;
+
+  margin: 0 10px;
+
   border-radius: 10px;
 }
 .carousel .carousel__item .carousel__info {
@@ -19,4 +15,13 @@
 }
 .carousel .carousel__item .carousel__info h4 {
   margin-top: 10px;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: #8c8c8c !important;
+}
+@media (max-width: 800px) {
+  .carousel {
+    padding: 15px 40px;
+  }
 }

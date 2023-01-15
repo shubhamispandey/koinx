@@ -50,6 +50,9 @@
 .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root:hover {
   background-color: transparent !important;
 }
+.coins__filters .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.Mui-checked {
+  color: #fff !important;
+}
 
 /* PAGINATION */
 
@@ -61,4 +64,29 @@
 
 .coins .coins__pagination ul li:not(:last-child) {
   margin-right: 10px;
+}
+@media (max-width: 1000px) {
+  .btn.defi,
+  .btn.nft {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  .coins {
+    padding: 15px 40px;
+  }
+  .coins .coins__filters {
+    display: none;
+  }
+  .coins .coins__pagination {
+    justify-content: center;
+  }
+}
+@media (max-width: 600px) {
+  .coins {
+    padding: 15px 20px;
+  }
+  .coins .coins__pagination ul li:not(:last-child) {
+    margin-right: 0px;
+  }
 }

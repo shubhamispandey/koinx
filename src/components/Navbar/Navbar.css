@@ -35,3 +35,13 @@
 .navbar .navbar__menu:hover {
   background: #e7e7e747;
 }
+@media (max-width: 800px) {
+  .navbar {
+    padding: 15px 40px;
+  }
+}
+@media (max-width: 600px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+}
