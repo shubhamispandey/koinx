@@ -1,5 +1,4 @@
 import React from "react";
-import "./Coins.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import {
@@ -11,6 +10,8 @@ import {
 } from "@mui/material";
 import { Star, StarBorder } from "@mui/icons-material";
 import Table from "../Table/Table";
+
+import "./Coins.css";
 
 const Coins = () => {
   // API STATES
